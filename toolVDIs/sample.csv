@@ -1,0 +1,10 @@
+xentest2,e2666f45-b94c-4a5f-8411-da7cc9dbe4e7,2,512MiB,vlan257
+xentest9,a956f566-c439-4e28-ac5a-6ea62abe7087,1,1073741824,vlan257
+xentest10,bc106af8-ea52-4e7a-9a14-5b22324fb211,2,1073741824,vlan257
+xentest7,91cade55-4ed6-4c10-ac4a-664dcadcc6cb,2,512MiB,vlan257
+xentest3,86b870bc-44af-47c5-a1d4-acc4224b416f,3,512MiB,vlan257
+xentest5,c9d504db-d711-44c8-bf62-fe0674ddf36d,2,512MiB,vlan257
+xentest1,74eb73f2-8c8c-466c-a252-dff09f7f0422,2,1024MiB,vlan257
+xentest4,c065e910-ae07-4c17-b156-3b062fb955d5,2,512MiB,vlan257
+xentest6,7201f71c-c9cf-4189-a984-573a2d3d6135,2,1073741824,vlan257
+xentest8,efe4cbef-9b4e-4d95-8bdf-b6468d0014ad,2,512MiB,vlan257
