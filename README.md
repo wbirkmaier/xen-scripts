@@ -1,27 +1,19 @@
-This will run through a cluster and get:
+Just a place to throw general Xenserver oriented scripts.
 
-* Hostname as reported to xenserver
-* CPUs
-* Memory
-* Networks
-* OS
-* Number of disks and size in bytes (Includes un/mounted optical media)
+# toolVDI Directory
 
-Example:
+* vmInventory.sh 
+	* create a usable CSV of all VMs on a cluster, that can be used on a disk with just VDIs and create PV Linux VM containers to attach to the VDIs.
 
-Name: insight-elasticsearch1-10.bur.us.genstage
-CPUs: 8
-Memory: 5368709120
-Networks: 0/ip: 10.12.60.21; 0/ipv6/0: fe80::50b8:2aff:fe78:ba88
-OS: name: CentOS release 6.6 (Final); uname: 3.10.56-11.el6.centos.alt.x86_64; distro: centos; major: 6; minor: 6
-Disk 0 Size: 32212254720
+* vdiRebuild.sh
+	* this will take a list of UUIDs for VDIs and label from a list of VMs.  list should be name-label,vdiUuid,vCpus,vMem,networkLabel in csv format.
 
-Some fields such as network and os can not be pulled without xentools, an example:
+* unlockVDI.sh
+	* After a host crash, this will take a vm uuid as a paramater, release the disk, then forget it, re introduce to the SR then label and attach back to the VM.
 
-Name: qajump1-01.bur.us.gendev
-CPUs: 2
-Memory: 8589934592
-Networks: <not in database>
-OS: <not in database>
-Disk 0 Size: 68719476736
-Disk 1 Size: 4283871232
+# tool OVS Directory
+
+* resetStorage.sh
+	* On xenserver 6.2 if you have this problem: 2015-12-04 22:39:44 [ 3185.974209] nfs: server 172.16.156.228 not responding, timed out, Then do this:
+	* tail -f /var/log/messages | awk '/nfs: server/ { system("/bin/sh /root/resetStorage.sh") }'
+	* It will shut down the ports for NFS storage network, if allocated seperatly (you must know what they are) and bring them up again, restoring the network

@@ -9,7 +9,7 @@ This will run through a cluster and get:
 
 Example:
 
-Name: insight-elasticsearch1-10.bur.us.genstage
+Name: server1-01.prod.com
 CPUs: 8
 Memory: 5368709120
 Networks: 0/ip: 10.12.60.21; 0/ipv6/0: fe80::50b8:2aff:fe78:ba88
@@ -18,7 +18,7 @@ Disk 0 Size: 32212254720
 
 Some fields such as network and os can not be pulled without xentools, an example:
 
-Name: qajump1-01.bur.us.gendev
+Name: jump1-01.prod.com
 CPUs: 2
 Memory: 8589934592
 Networks: <not in database>
